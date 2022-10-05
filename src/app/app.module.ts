@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BlackBoxComponent } from './components/black-box/black-box.component';
 import { BlackBoxesComponent } from './components/black-boxes/black-boxes.component';
 import { LoginComponent } from './components/login/login.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     BlackBoxComponent,
     BlackBoxesComponent,
     LoginComponent,
-    NavigationComponent
+    NavComponent,
   ],
   imports: [
     BrowserModule,
