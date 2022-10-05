@@ -1,10 +1,9 @@
 .black-box {
     width: 200px;
     height: 200px;
-    background-color: black;
+    background-color: red;
     position: fixed;
     left: 50%;
     top: 50%;
-    bottom: 50%;
     transform: translate(-50%, -50%);
 }
