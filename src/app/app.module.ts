@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlackBoxComponent } from './components/black-box/black-box.component';
 import { BlackBoxesComponent } from './components/black-boxes/black-boxes.component';
+import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 
@@ -16,6 +17,7 @@ import { NavComponent } from './components/nav/nav.component';
     BlackBoxesComponent,
     LoginComponent,
     NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

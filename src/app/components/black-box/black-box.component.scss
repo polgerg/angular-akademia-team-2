@@ -3,7 +3,7 @@
     height: 200px;
     background-color: red;
     position: fixed;
-    left: 50%;
+    left: calc(50% + 125px);
     top: 50%;
     transform: translate(-50%, -50%);
 }
