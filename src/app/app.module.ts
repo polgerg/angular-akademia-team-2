@@ -9,6 +9,10 @@ import { BlackBoxesComponent } from './components/black-boxes/black-boxes.compon
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
+import { StickyNotesComponent } from './components/pages/sticky-notes/sticky-notes.component';
+import { StickyNotesListComponent } from './components/pages/sticky-notes/sticky-notes-list/sticky-notes-list.component';
+import { StickyNoteComponent } from './components/pages/sticky-notes/sticky-note/sticky-note.component';
+import { StickyNoteFormComponent } from './components/pages/sticky-notes/sticky-note-form/sticky-note-form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { NavComponent } from './components/nav/nav.component';
     BlackBoxesComponent,
     LoginComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    StickyNotesComponent,
+    StickyNotesListComponent,
+    StickyNoteComponent,
+    StickyNoteFormComponent
   ],
   imports: [
     BrowserModule,

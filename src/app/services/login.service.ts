@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   login(user: string, password: string): boolean {
     if(user === 'user' && password === 'password') {
@@ -17,6 +18,7 @@ export class LoginService {
 
   logout(): void {
     localStorage.removeItem('username')
+    this.router.navigate(['login'])
   }
 
   getUser(): string {
