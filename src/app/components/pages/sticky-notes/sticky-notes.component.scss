@@ -1,5 +1,6 @@
 .sticky-notes-main-container {
     height: 100%;
     width: calc(100vw - 250px);
+    flex-grow: 1;
     background-color: #f2f2f4;
 }
