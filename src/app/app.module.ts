@@ -13,6 +13,7 @@ import { StickyNotesComponent } from './components/pages/sticky-notes/sticky-not
 import { StickyNotesListComponent } from './components/pages/sticky-notes/sticky-notes-list/sticky-notes-list.component';
 import { StickyNoteComponent } from './components/pages/sticky-notes/sticky-note/sticky-note.component';
 import { StickyNoteFormComponent } from './components/pages/sticky-notes/sticky-note-form/sticky-note-form.component';
+import { AlignmentBarComponent } from './components/pages/sticky-notes/alignment-bar/alignment-bar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StickyNoteFormComponent } from './components/pages/sticky-notes/sticky-
     StickyNotesComponent,
     StickyNotesListComponent,
     StickyNoteComponent,
-    StickyNoteFormComponent
+    StickyNoteFormComponent,
+    AlignmentBarComponent
   ],
   imports: [
     BrowserModule,

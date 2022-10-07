@@ -1,4 +1,6 @@
 <div class="notes-container">
+    <h2 *ngIf="noteService.stickyNotes?.length === 0">No Notes yet!</h2>
     <app-sticky-note *ngFor="let note of noteService.stickyNotes" [note]="note"></app-sticky-note>
 </div>
+
 

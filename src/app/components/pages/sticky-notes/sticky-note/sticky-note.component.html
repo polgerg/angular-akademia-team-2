@@ -1,4 +1,4 @@
-<div class="note-div">
-    <h1>{{note?.stickyTitle}}</h1>
-    <p>{{note?.stickyNote}}</p>
+<div class="note-div" [ngStyle]="{'justify-content' : alignmentService.verticalAlignment}">
+    <h1 [ngStyle]="{'text-align' : alignmentService.horizontalAlignment}">{{note?.stickyTitle}}</h1>
+    <p [ngStyle]="{'text-align' : alignmentService.horizontalAlignment}">{{note?.stickyNote}}</p>
 </div>
