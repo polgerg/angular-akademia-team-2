@@ -34,14 +34,9 @@ export class StickyNoteEditFormComponent implements OnInit {
   }
 
   onEditStickyNote(): void {
-   this.noteService.stickyNotes?.findIndex(note => {
-    if(note.id === this.route.snapshot.params['id']) {
-      note.stickyTitle = this.editStickyTitle.value
-      note.stickyNote = this.editStickyNote.value
-    }
-   });
-   console.log(this.noteService.stickyNotes)
-   this.router.navigate([`home/sticky-notes`])
+    let id = this.route.snapshot.params['id']
+    this.noteService.editNote(id, this.editStickyTitle.value, this.editStickyNote.value)
+    this.router.navigate([`home/sticky-notes`])
   }
 
 }

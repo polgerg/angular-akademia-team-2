@@ -14,7 +14,7 @@ export class StickyNotesComponent implements OnInit {
   }
 
   onDeleteAll(): void {
-    this.noteService.stickyNotes = [];
+    this.noteService.deleteAllNotes()
   }
 
 }
