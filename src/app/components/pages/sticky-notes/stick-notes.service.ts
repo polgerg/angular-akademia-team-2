@@ -15,4 +15,13 @@ export class StickNotesService {
   addNote(note: StickyNote): void {
     this.stickyNotes?.push(note)
   }
+
+  editNote(id: string): void {
+    
+  }
+
+  deleteNote(id: string): void {
+    let index = this.stickyNotes?.findIndex(note => note.id === id)
+    this.stickyNotes?.splice(index!, 1)
+  }
 }

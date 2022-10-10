@@ -25,8 +25,9 @@ export class StickyNoteFormComponent implements OnInit {
 
   onSubmitStickyNote(): void {
     if(this.stickyForm.valid) {
-      let stickyNote: StickyNote = this.stickyForm.value;
+      let stickyNote: StickyNote = {...this.stickyForm.value};
       stickyNote.id = uuidv4()
+      console.log(stickyNote.id)
       console.log(stickyNote)
       this.noteService.addNote(stickyNote)
     }

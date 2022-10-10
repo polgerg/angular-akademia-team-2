@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StickNotesService } from './stick-notes.service';
 
 @Component({
   selector: 'app-sticky-notes',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StickyNotesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public noteService: StickNotesService) { }
 
   ngOnInit(): void {
+  }
+
+  onDeleteAll(): void {
+    this.noteService.stickyNotes = [];
   }
 
 }
