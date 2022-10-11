@@ -7,6 +7,8 @@ import { BlackBoxComponent } from './components/black-box/black-box.component';
 import { BlackBoxesComponent } from './components/black-boxes/black-boxes.component';
 import { StickyNotesComponent } from './components/pages/sticky-notes/sticky-notes.component';
 import { StickyNoteEditFormComponent } from './components/pages/sticky-notes/sticky-note-edit-form/sticky-note-edit-form.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
+import { AccordionPageComponent } from './components/pages/accordion-page/accordion-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -15,8 +17,10 @@ const routes: Routes = [
     { path: 'task1', component: BlackBoxComponent },
     { path: 'task2', component: BlackBoxesComponent },
     { path: 'sticky-notes', component: StickyNotesComponent },
-    { path: 'sticky-notes/edit/:id', component: StickyNoteEditFormComponent }
+    { path: 'sticky-notes/edit/:id', component: StickyNoteEditFormComponent },
+    { path: 'accordion', component: AccordionPageComponent },
   ] },
+  { path: '**', redirectTo: 'home'}
 ];
 
 @NgModule({
