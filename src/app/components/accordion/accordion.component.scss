@@ -29,27 +29,25 @@
     position: absolute;
     top: 30px;
     right: 20px;
-}
 
-.arrow::before, 
-.arrow::after {
-    position: relative;
-    content: '';
-    display: block;
-    width: 10px;
-    height: 1px;
-    background: white;
-    transition: 0.3s ease-in-out;
-}
-
-.arrow::before {
-    transform: rotate(45deg);
-}
-
-.arrow::after {
-    left: 6px;
-    top: -1px;
-    transform: rotate(-45deg);
+    &::before, &::after {
+        position: relative;
+        content: '';
+        display: block;
+        width: 10px;
+        height: 1px;
+        background: white;
+        transition: 0.3s ease-in-out;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    
+    &:after {
+        left: 6px;
+        top: -1px;
+        transform: rotate(-45deg);
+    }
 }
 
 button.active .arrow::before {
