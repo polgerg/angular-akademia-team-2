@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
+import { Input } from '@angular/core';
+import { Accordion } from '../accordion/models/accordion';
+import { AccordionDataService } from 'src/app/services/accordion-data.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,9 +11,12 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private authService: LoginService) { }
+  constructor(private authService: LoginService, private accDataService: AccordionDataService) { }
+
+  @Input() accordionList?: Accordion[];
 
   ngOnInit(): void {
+    this.accordionList = this.accDataService.accordionList
   }
 
   logout(): void {
