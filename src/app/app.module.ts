@@ -17,6 +17,7 @@ import { AlignmentBarComponent } from './components/pages/sticky-notes/alignment
 import { StickyNoteEditFormComponent } from './components/pages/sticky-notes/sticky-note-edit-form/sticky-note-edit-form.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { AccordionPageComponent } from './components/pages/accordion-page/accordion-page.component';
+import { GridExampleComponent } from './components/pages/grid-example/grid-example.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AccordionPageComponent } from './components/pages/accordion-page/accord
     AlignmentBarComponent,
     StickyNoteEditFormComponent,
     AccordionComponent,
-    AccordionPageComponent
+    AccordionPageComponent,
+    GridExampleComponent
   ],
   imports: [
     BrowserModule,

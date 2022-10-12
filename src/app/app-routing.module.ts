@@ -8,6 +8,7 @@ import { BlackBoxesComponent } from './components/pages/black-boxes/black-boxes.
 import { StickyNotesComponent } from './components/pages/sticky-notes/sticky-notes.component';
 import { StickyNoteEditFormComponent } from './components/pages/sticky-notes/sticky-note-edit-form/sticky-note-edit-form.component';
 import { AccordionPageComponent } from './components/pages/accordion-page/accordion-page.component';
+import { GridExampleComponent } from './components/pages/grid-example/grid-example.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path: 'sticky-notes', component: StickyNotesComponent },
     { path: 'sticky-notes/edit/:id', component: StickyNoteEditFormComponent },
     { path: 'accordion', component: AccordionPageComponent },
+    { path: 'grid-example', component: GridExampleComponent },
   ] },
   { path: '**', redirectTo: 'home'}
 ];
