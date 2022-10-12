@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/pages/login/login.component';
 import { LoggedInGuard } from './services/logged-in.guard';
-import { HomeComponent } from './components/home/home.component';
-import { BlackBoxComponent } from './components/black-box/black-box.component';
-import { BlackBoxesComponent } from './components/black-boxes/black-boxes.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { BlackBoxComponent } from './components/pages/black-box/black-box.component';
+import { BlackBoxesComponent } from './components/pages/black-boxes/black-boxes.component';
 import { StickyNotesComponent } from './components/pages/sticky-notes/sticky-notes.component';
 import { StickyNoteEditFormComponent } from './components/pages/sticky-notes/sticky-note-edit-form/sticky-note-edit-form.component';
-import { AccordionComponent } from './components/accordion/accordion.component';
 import { AccordionPageComponent } from './components/pages/accordion-page/accordion-page.component';
 
 const routes: Routes = [

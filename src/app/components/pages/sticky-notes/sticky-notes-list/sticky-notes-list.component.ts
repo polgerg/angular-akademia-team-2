@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlignmentService } from '../alignment-bar/alignment.service';
 import { StickNotesService } from '../stick-notes.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { StickNotesService } from '../stick-notes.service';
 })
 export class StickyNotesListComponent implements OnInit {
 
-  constructor(public noteService: StickNotesService) { }
+  constructor(public noteService: StickNotesService, public alignmentService: AlignmentService) { }
 
   ngOnInit(): void {
   }

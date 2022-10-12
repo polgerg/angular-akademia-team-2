@@ -4,10 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BlackBoxComponent } from './components/black-box/black-box.component';
-import { BlackBoxesComponent } from './components/black-boxes/black-boxes.component';
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
+import { BlackBoxComponent } from './components/pages/black-box/black-box.component';
+import { BlackBoxesComponent } from './components/pages/black-boxes/black-boxes.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { LoginComponent } from './components/pages/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { StickyNotesComponent } from './components/pages/sticky-notes/sticky-notes.component';
 import { StickyNotesListComponent } from './components/pages/sticky-notes/sticky-notes-list/sticky-notes-list.component';
