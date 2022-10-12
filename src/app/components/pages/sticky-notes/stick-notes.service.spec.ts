@@ -20,7 +20,7 @@ describe('StickNotesService', () => {
       {stickyTitle: 'test stickTitle2', stickyNote: 'valami note2', id: '12345'},
     ]
     service.deleteAllNotes()
-    expect(service.stickyNotes).toEqual([])   
+    expect(service.stickyNotes).withContext('Sticky notes list should be empty').toEqual([])   
   })
 
   it('should have a delete function, that delete an exact note from the list', ()=> {
@@ -29,8 +29,8 @@ describe('StickNotesService', () => {
       {stickyTitle: 'test stickTitle2', stickyNote: 'valami note2', id: '12345'},
     ]
     service.deleteNote('1234');
-    expect(service.stickyNotes).toEqual([{stickyTitle: 'test stickTitle2', stickyNote: 'valami note2', id: '12345'}])
-    expect(service.stickyNotes.length).toEqual(1)
+    expect(service.stickyNotes).withContext('The deleted note should be removed from the list').toEqual([{stickyTitle: 'test stickTitle2', stickyNote: 'valami note2', id: '12345'}])
+    expect(service.stickyNotes.length).withContext('The length of the sticky notes list should be').toEqual(1)
   })
 
   it('should have an edit note function, that edits a note from the list', ()=> {
