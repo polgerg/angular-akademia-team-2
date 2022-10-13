@@ -42,18 +42,20 @@ describe('StickyNotesComponent', () => {
     expect(h1tag.nativeElement.textContent).toContain('Sticky Notes');
   });
 
-  it('should render Add note button', () => {
+  it('should render Add note button', fakeAsync(() => {
     const stickyTitleInput: HTMLInputElement =
       fixture.debugElement.nativeElement.querySelector('#stickyTitleInput');
-    console.log(stickyTitleInput);
     stickyTitleInput.value = 'teszt';
-    console.log(stickyTitleInput.value);
     const addNoteButton: HTMLButtonElement =
       fixture.nativeElement.querySelector('#add-note-btn');
     console.log(addNoteButton);
+    stickyTitleInput.dispatchEvent(new Event('input'));
+    tick();
+    fixture.detectChanges();
     addNoteButton.click();
+    tick();
     console.log(noteService.stickyNotes);
     expect(noteService.stickyNotes?.length).toEqual(1);
     // expect(noteService.stickyNotes)
-  });
+  }));
 });

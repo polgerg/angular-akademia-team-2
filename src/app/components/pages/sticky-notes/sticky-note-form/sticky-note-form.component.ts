@@ -13,7 +13,7 @@ export class StickyNoteFormComponent implements OnInit {
 
   stickyForm: FormGroup
 
-  constructor(fb: FormBuilder, private noteService: StickNotesService) { 
+  constructor(fb: FormBuilder, private noteService: StickNotesService) {
     this.stickyForm = fb.group({
       stickyTitle: ['', [Validators.required]],
       stickyNote: ['', []]
@@ -27,8 +27,6 @@ export class StickyNoteFormComponent implements OnInit {
     if(this.stickyForm.valid) {
       let stickyNote: StickyNote = {...this.stickyForm.value};
       stickyNote.id = uuidv4()
-      console.log(stickyNote.id)
-      console.log(stickyNote)
       this.noteService.addNote(stickyNote)
     }
     console.log(this.noteService.stickyNotes)
