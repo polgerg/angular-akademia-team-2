@@ -17,8 +17,7 @@ import { StickyNotesComponent } from './sticky-notes.component';
 describe('StickyNotesComponent', () => {
   let component: StickyNotesComponent;
   let fixture: ComponentFixture<StickyNotesComponent>;
-  let el: DebugElement;
-  let noteService: StickNotesService;
+  let el: any;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -29,8 +28,7 @@ describe('StickyNotesComponent', () => {
     fixture = TestBed.createComponent(StickyNotesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    el = fixture.debugElement;
-    noteService = new StickNotesService();
+    el = fixture.debugElement.nativeElement;
   });
 
   it('should create', () => {
@@ -42,20 +40,20 @@ describe('StickyNotesComponent', () => {
     expect(h1tag.nativeElement.textContent).toContain('Sticky Notes');
   });
 
-  it('should render Add note button', fakeAsync(() => {
-    const stickyTitleInput: HTMLInputElement =
-      fixture.debugElement.nativeElement.querySelector('#stickyTitleInput');
-    stickyTitleInput.value = 'teszt';
-    const addNoteButton: HTMLButtonElement =
-      fixture.nativeElement.querySelector('#add-note-btn');
-    console.log(addNoteButton);
-    stickyTitleInput.dispatchEvent(new Event('input'));
-    tick();
+  it('should create a new note', fakeAsync(() => {
+    const titleInput: HTMLInputElement = el.querySelector('#stickyTitleInput');
+    const noteInput: HTMLInputElement = el.querySelector('#stickyNoteInput');
+
+    titleInput.value = 'Test Title';
+    titleInput.dispatchEvent(new Event('input'));
+    noteInput.value = 'Test Note';
+    noteInput.dispatchEvent(new Event('input'));
+
+    const form: HTMLFormElement = el.querySelector('#stickyNoteForm');
+    form.dispatchEvent(new Event('submit'));
     fixture.detectChanges();
-    addNoteButton.click();
+
     tick();
-    console.log(noteService.stickyNotes);
-    expect(noteService.stickyNotes?.length).toEqual(1);
-    // expect(noteService.stickyNotes)
+    expect(el.querySelectorAll('.note-div').length).toBe(1);
   }));
 });
