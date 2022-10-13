@@ -41,7 +41,7 @@ import { GridExampleComponent } from './components/pages/grid-example/grid-examp
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
