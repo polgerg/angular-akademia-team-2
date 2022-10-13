@@ -18,6 +18,7 @@ describe('StickyNotesComponent', () => {
   let component: StickyNotesComponent;
   let fixture: ComponentFixture<StickyNotesComponent>;
   let el: any;
+  let noteService: StickNotesService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -29,18 +30,14 @@ describe('StickyNotesComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
     el = fixture.debugElement.nativeElement;
+    noteService = new StickNotesService();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render Sticky Notes in h1 tag', () => {
-    let h1tag = el.query(By.css('#sticky-notes-title'));
-    expect(h1tag.nativeElement.textContent).toContain('Sticky Notes');
-  });
-
-  it('should create a new note', fakeAsync(() => {
+  it('should create a new note', () => {
     const titleInput: HTMLInputElement = el.querySelector('#stickyTitleInput');
     const noteInput: HTMLInputElement = el.querySelector('#stickyNoteInput');
 
@@ -53,7 +50,20 @@ describe('StickyNotesComponent', () => {
     form.dispatchEvent(new Event('submit'));
     fixture.detectChanges();
 
-    tick();
     expect(el.querySelectorAll('.note-div').length).toBe(1);
-  }));
+  });
+
+  it('should delete all notes', () => {
+    noteService.addNote({stickyTitle: 'test1', stickyNote: 'test1', id: '1234'});
+    noteService.addNote({stickyTitle: 'test2', stickyNote: 'test2', id: '4321'});
+    fixture.detectChanges();
+    console.log('length:', noteService.stickyNotes?.length);
+    const deleteAllBtn: HTMLButtonElement = fixture.debugElement.query(By.css('#deleteAllBtn')).nativeElement;
+    console.log(deleteAllBtn);
+
+    deleteAllBtn.click()
+    fixture.detectChanges()
+    expect(el.querySelectorAll('.note-div').length).toBe(0)
+  })
+
 });
