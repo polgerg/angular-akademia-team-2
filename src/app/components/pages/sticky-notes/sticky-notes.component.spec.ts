@@ -1,16 +1,7 @@
-import { DebugElement } from '@angular/core';
-import {
-  ComponentFixture,
-  fakeAsync,
-  TestBed,
-  tick,
-} from '@angular/core/testing';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
 import { AppModule } from 'src/app/app.module';
 import { StickNotesService } from './stick-notes.service';
-import { StickyNoteFormComponent } from './sticky-note-form/sticky-note-form.component';
 
 import { StickyNotesComponent } from './sticky-notes.component';
 
@@ -54,16 +45,40 @@ describe('StickyNotesComponent', () => {
   });
 
   it('should delete all notes', () => {
-    noteService.addNote({stickyTitle: 'test1', stickyNote: 'test1', id: '1234'});
-    noteService.addNote({stickyTitle: 'test2', stickyNote: 'test2', id: '4321'});
+    noteService.addNote({
+      stickyTitle: 'test1',
+      stickyNote: 'test1',
+      id: '1234',
+    });
+    noteService.addNote({
+      stickyTitle: 'test2',
+      stickyNote: 'test2',
+      id: '4321',
+    });
     fixture.detectChanges();
     console.log('length:', noteService.stickyNotes?.length);
-    const deleteAllBtn: HTMLButtonElement = fixture.debugElement.query(By.css('#deleteAllBtn')).nativeElement;
+    const deleteAllBtn: HTMLButtonElement = fixture.debugElement.query(
+      By.css('#deleteAllBtn')
+    ).nativeElement;
     console.log(deleteAllBtn);
 
-    deleteAllBtn.click()
-    fixture.detectChanges()
-    expect(el.querySelectorAll('.note-div').length).toBe(0)
-  })
+    deleteAllBtn.click();
+    fixture.detectChanges();
+    expect(el.querySelectorAll('.note-div').length).toBe(0);
+  });
 
+  it('should delete a note by id', () => {
+    noteService.addNote({
+      stickyTitle: 'test1',
+      stickyNote: 'test1',
+      id: '1234',
+    });
+    noteService.addNote({
+      stickyTitle: 'test2',
+      stickyNote: 'test2',
+      id: '4321',
+    });
+    fixture.detectChanges();
+    const deleteNoteButton:HTMLElement = fixture.debugElement.query(By.css('#1234'));
+  })
 });
