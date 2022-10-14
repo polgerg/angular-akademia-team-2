@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { AppModule } from 'src/app/app.module';
 
 import { StickyNotesComponent } from './sticky-notes.component';
@@ -91,4 +92,102 @@ describe('StickyNotesComponent', () => {
     fixture.detectChanges();
     expect(el.querySelector('')).toBeFalsy();
   }); */
+
+  //ALIGN TESTS
+
+  it('should align the notes Horizontally to the start', () => {
+    fixture.detectChanges();
+
+    const alignBtn: HTMLDivElement = fixture.debugElement.query(By.css('#a1')).nativeElement;
+
+    alignBtn.click();
+    fixture.detectChanges();
+
+    expect(el.querySelector('#notes-container').style.justifyContent).toBe('start');
+  });
+
+  it('should align the notes Horizontally to the end', () => {
+    fixture.detectChanges();
+
+    const alignBtn: HTMLDivElement = fixture.debugElement.query(By.css('#a2')).nativeElement;
+
+    alignBtn.click();
+
+    fixture.detectChanges();
+
+    expect(el.querySelector('#notes-container').style.justifyContent).toBe('end');
+  });
+
+  it('should align the notes Horizontally to the center', () => {
+    fixture.detectChanges();
+
+    const alignBtn: HTMLDivElement = fixture.debugElement.query(By.css('#a3')).nativeElement;
+
+    alignBtn.click();
+
+    fixture.detectChanges();
+
+    expect(el.querySelector('#notes-container').style.justifyContent).toBe('center');
+  });
+
+  it('should align the notes Horizontally to space between', () => {
+    fixture.detectChanges();
+
+    const alignBtn: HTMLDivElement = fixture.debugElement.query(By.css('#a4')).nativeElement;
+
+    alignBtn.click();
+
+    fixture.detectChanges();
+
+    expect(el.querySelector('#notes-container').style.justifyContent).toBe('space-between');
+  });
+
+  it('should align the notes Vertically to the start', () => {
+    fixture.detectChanges();
+
+    const alignBtn: HTMLDivElement = fixture.debugElement.query(By.css('#b1')).nativeElement;
+
+    alignBtn.click();
+
+    fixture.detectChanges();
+
+    expect(el.querySelector('#notes-container').style.alignItems).toBe('flex-start');
+  });
+
+  it('should align the notes Vertically to the end', () => {
+    fixture.detectChanges();
+
+    const alignBtn: HTMLDivElement = fixture.debugElement.query(By.css('#b2')).nativeElement;
+
+    alignBtn.click();
+
+    fixture.detectChanges();
+
+    expect(el.querySelector('#notes-container').style.alignItems).toBe('flex-end');
+  });
+
+  it('should align the notes Vertically to the center', () => {
+    fixture.detectChanges();
+
+    const alignBtn: HTMLDivElement = fixture.debugElement.query(By.css('#b3')).nativeElement;
+
+    alignBtn.click();
+
+    fixture.detectChanges();
+
+    expect(el.querySelector('#notes-container').style.alignItems).toBe('center');
+  });
+
+
+  it('should align the notes Vertically to space-around', () => {
+    fixture.detectChanges();
+
+    const alignBtn: HTMLDivElement = fixture.debugElement.query(By.css('#b4')).nativeElement;
+
+    alignBtn.click();
+
+    fixture.detectChanges();
+
+    expect(el.querySelector('#notes-container').style.alignItems).toBe('stretch');
+  });
 });

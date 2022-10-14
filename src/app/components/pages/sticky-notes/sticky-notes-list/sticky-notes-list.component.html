@@ -1,5 +1,6 @@
 <h2 *ngIf="noteService.stickyNotes?.length === 0">No Notes yet!</h2>
 <div
+  id="notes-container"
   class="notes-container"
   [ngStyle]="{
     'justify-content': alignmentService.horizontalAlignment,

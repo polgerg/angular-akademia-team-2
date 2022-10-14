@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class AlignmentService {
 
   horizontalAlignment: string = 'center'
-  verticalAlignment: string = 'top'
+  verticalAlignment: string = 'flex-start'
 
   constructor() { }
 
