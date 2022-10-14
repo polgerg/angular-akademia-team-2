@@ -6,8 +6,10 @@
     'align-items': alignmentService.verticalAlignment
   }"
 >
-  <app-sticky-note
-    *ngFor="let note of noteService.stickyNotes"
-    [note]="note"
-  ></app-sticky-note>
+  <ng-container *ngFor="let note of noteService.stickyNotes">
+    <app-sticky-note
+      id="{{note.id}}"
+      [note]="note"
+    ></app-sticky-note>
+  </ng-container>
 </div>

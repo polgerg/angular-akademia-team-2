@@ -1,7 +1,5 @@
-import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppModule } from 'src/app/app.module';
-import { StickNotesService } from './stick-notes.service';
 
 import { StickyNotesComponent } from './sticky-notes.component';
 
@@ -9,7 +7,6 @@ describe('StickyNotesComponent', () => {
   let component: StickyNotesComponent;
   let fixture: ComponentFixture<StickyNotesComponent>;
   let el: any;
-  let noteService: StickNotesService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -21,7 +18,6 @@ describe('StickyNotesComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
     el = fixture.debugElement.nativeElement;
-    noteService = new StickNotesService();
   });
 
   it('should create', () => {
@@ -44,30 +40,40 @@ describe('StickyNotesComponent', () => {
     expect(el.querySelectorAll('.note-div').length).toBe(1);
   });
 
-/*     it('should delete all notes', () => {
-    noteService.addNote({
-      stickyTitle: 'test1',
-      stickyNote: 'test1',
-      id: '1234',
-    });
-    noteService.addNote({
-      stickyTitle: 'test2',
-      stickyNote: 'test2',
-      id: '4321',
-    });
-    fixture.detectChanges();
-    console.log('length:', noteService.stickyNotes?.length);
-    const deleteAllBtn: HTMLButtonElement = fixture.debugElement.query(
-      By.css('#deleteAllBtn')
-    ).nativeElement;
-    console.log(deleteAllBtn);
+  it('should delete all notes if delete all button is clicked', () => {
+    // find input fields in new note form
+    const titleInput: HTMLInputElement = el.querySelector('#stickyTitleInput');
+    const noteInput: HTMLInputElement = el.querySelector('#stickyNoteInput');
 
+    // give test values for first note
+    titleInput.value = 'Test Title';
+    titleInput.dispatchEvent(new Event('input'));
+    noteInput.value = 'Test Note';
+    noteInput.dispatchEvent(new Event('input'));
+
+    // find form element and submit the first note
+    const form: HTMLFormElement = el.querySelector('#stickyNoteForm');
+    form.dispatchEvent(new Event('submit'));
+
+    // give test values for second note
+    titleInput.value = 'Test Title 2';
+    titleInput.dispatchEvent(new Event('input'));
+    noteInput.value = 'Test Note 2';
+    noteInput.dispatchEvent(new Event('input'));
+
+    // submit the second note
+    form.dispatchEvent(new Event('submit'));
+
+    fixture.detectChanges();
+
+    // find delete all button and check if it works
+    const deleteAllBtn: HTMLButtonElement = el.querySelector('#deleteAllBtn');
     deleteAllBtn.click();
     fixture.detectChanges();
     expect(el.querySelectorAll('.note-div').length).toBe(0);
-  }); */
+  });
 
-  it('should delete a note by id', fakeAsync(() => {
+  /*   it('should delete a note by id', () => {
 
     const titleInput: HTMLInputElement = el.querySelector('#stickyTitleInput');
     const noteInput: HTMLInputElement = el.querySelector('#stickyNoteInput');
@@ -80,11 +86,9 @@ describe('StickyNotesComponent', () => {
     const form: HTMLFormElement = el.querySelector('#stickyNoteForm');
     form.dispatchEvent(new Event('submit'));
     fixture.detectChanges();
-
-    const deleteNoteButton: HTMLButtonElement = el.querySelector(".delete-icon-div");
-    console.log('deleteNoteButton', deleteNoteButton);
+    const deleteNoteButton: HTMLButtonElement = el.querySelector('');
     deleteNoteButton.click();
     fixture.detectChanges();
-    expect(el.querySelectorAll('.note-div').length).toBe(0);
-  }));
+    expect(el.querySelector('')).toBeFalsy();
+  }); */
 });
