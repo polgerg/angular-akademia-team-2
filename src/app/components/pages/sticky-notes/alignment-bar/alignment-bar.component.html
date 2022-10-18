@@ -27,23 +27,19 @@
         <mat-icon>format_align_justify</mat-icon>
       </mat-button-toggle>
     </mat-button-toggle-group>
-    <div>
-        <div>
-            <img src="assets/images/line.png" alt="">
-        </div>
-    </div>
+
     <mat-button-toggle-group #group="matButtonToggleGroup">
       <mat-button-toggle value="flex-start" aria-label="Text align left" (click)="setVerticalAlignment('flex-start')">
-        <mat-icon>format_align_left</mat-icon>
+        <mat-icon>vertical_align_top</mat-icon>
       </mat-button-toggle>
       <mat-button-toggle value="flex-end" aria-label="Text align center" (click)="setVerticalAlignment('flex-end')">
-        <mat-icon>format_align_center</mat-icon>
+        <mat-icon>vertical_align_bottom</mat-icon>
       </mat-button-toggle>
       <mat-button-toggle value="center" aria-label="Text align right" (click)="setVerticalAlignment('center')">
-        <mat-icon>format_align_right</mat-icon>
+        <mat-icon>vertical_align_center</mat-icon>
       </mat-button-toggle>
       <mat-button-toggle value="stretch" aria-label="Text align justify" (click)="setVerticalAlignment('stretch')">
-        <mat-icon>format_align_justify</mat-icon>
+        <mat-icon>format_line_spacing</mat-icon>
       </mat-button-toggle>
     </mat-button-toggle-group>
     <!-- <div class="horizontal-alignment-div">

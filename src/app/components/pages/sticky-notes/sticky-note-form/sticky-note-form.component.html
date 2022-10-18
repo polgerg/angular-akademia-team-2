@@ -11,15 +11,17 @@
 </form> -->
 
 <form [formGroup]="stickyForm" (ngSubmit)="onSubmitStickyNote()" id="stickyNoteForm">
-  <mat-form-field appearance="fill">
-      <mat-label class="form-label" for="stickyTitleInput">Title:</mat-label>
-      <input matInput  class="form-control" type="text" id="stickyTitleInput" formControlName="stickyTitle">
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
-      <mat-label class="form-label" for="stickyNoteInput">Note:</mat-label>
-      <input matInput class="form-control" formControlName="password" type="password" id="password">
-  </mat-form-field>
+    <div class="inputs-div">
+        <mat-form-field appearance="fill">
+            <mat-label class="form-label" for="stickyTitleInput">Title:</mat-label>
+            <input matInput  class="form-control" type="text" id="stickyTitleInput" formControlName="stickyTitle">
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill">
+            <mat-label class="form-label" for="stickyNoteInput">Note:</mat-label>
+            <input matInput  class="form-control" type="text" id="stickyNoteInput" formControlName="stickyNote">
+        </mat-form-field>
+    </div>
 
   <button mat-raised-button color="accent" type="submit" [disabled]="stickyForm.invalid" id="add-note-btn">Add Note</button>
 </form>

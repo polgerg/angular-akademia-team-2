@@ -1,27 +1,19 @@
-<div class="container">
-    <!-- <form [formGroup]="editedStickyForm" (ngSubmit)="onEditStickyNote()" class="p-5">
-        <div>
-            <mat-label class="form-label mt-1" for="editStickyTitleInput">Title:</mat-label>
-            <input matInput class="form-control" type="text" id="editStickyTitleInput" formControlName="editStickyTitle">
-        </div>
-        <div>
-            <label class="form-label mt-1" for="editStickyNoteInput">Note:</label>
-            <textarea class="form-control" type="text" id="editStickyNoteInput" formControlName="editStickyNote"></textarea>
-        </div>
-        <button class="mt-3">Edit Note</button>
-    </form> -->
-
-    <form [formGroup]="editedStickyForm" (ngSubmit)="onEditStickyNote()">
-      <mat-form-field appearance="fill">
-          <mat-label class="form-label" for="editStickyTitleInput">Title:</mat-label>
-          <input matInput class="form-control" class="form-control" type="text" id="editStickyTitleInput" formControlName="editStickyTitle">
-      </mat-form-field>
-
-      <mat-form-field appearance="fill">
-          <mat-label class="form-label" for="editStickyNoteInput">Note:</mat-label>
-          <textarea matInput class="form-control" formControlName="password" type="password" id="password"></textarea>
-      </mat-form-field>
-
-      <button mat-raised-button color="accent" type="submit">Edit Note</button>
-  </form>
+<div>
+    <mat-card class="container">
+        <form [formGroup]="editedStickyForm" (ngSubmit)="onEditStickyNote()">
+            <h1>Edit Note</h1>
+            <div class="inputs-div">
+                <mat-form-field appearance="fill">
+                    <mat-label class="form-label" for="editStickyTitleInput">Title:</mat-label>
+                    <input matInput class="form-control" type="text" id="editStickyTitleInput" formControlName="editStickyTitle">
+                </mat-form-field>
+            
+                <mat-form-field appearance="fill">
+                    <mat-label class="form-label" for="editStickyNoteInput">Note:</mat-label>
+                    <input matInput  class="form-control" type="text" id="editStickyNoteInput" formControlName="editStickyNote">
+                </mat-form-field>
+            </div>
+            <button mat-raised-button color="accent" type="submit">Edit Note</button>
+        </form>
+    </mat-card>
 </div>

@@ -19,6 +19,5 @@
 
 .outlet-div {
     background-color: white;
-    width: 500px;
-    display: flex;
+    width: calc(100vw - 200px);
 }

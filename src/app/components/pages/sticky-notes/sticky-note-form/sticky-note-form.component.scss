@@ -1,13 +1,24 @@
 @import '../../../../../assets/styles/variables';
 
+#stickyNoteForm {
+    margin-top: 60px;
+}
+
+.inputs-div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
 button {
     height: 40px;
     width: 100%;
-    background-color: $secondColor;
-    color: $secondTextColor;
     padding: 4px 6px;
+    margin-bottom: 30px;
     border: none;
+    background-color: $secondColor;
     border-radius: 4px;
+    color: $secondTextColor;
 
     &:hover {
         background-color: $mainColor;

@@ -1,9 +1,9 @@
-<div class="note-div">
+<mat-card class="note-div" color="primary">
     <!-- <h1 [ngStyle]="{'text-align' : alignmentService.horizontalAlignment}">{{note?.stickyTitle}}</h1>
     <p [ngStyle]="{'text-align' : alignmentService.horizontalAlignment}">{{note?.stickyNote}}</p> -->
     <h1>{{note?.stickyTitle}}</h1>
     <p>{{note?.stickyNote}}</p>
-</div>
+    </mat-card>
 <div class="edit-main-container">
     <div class="edit-div">
         <button mat-button color="accent" class="icon-img-div" (click)="editNote(note!.id)">
