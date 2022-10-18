@@ -1,19 +1,33 @@
-<div>
-    <mat-card class="container">
-        <form [formGroup]="editedStickyForm" (ngSubmit)="onEditStickyNote()">
-            <h1>Edit Note</h1>
-            <div class="inputs-div">
-                <mat-form-field appearance="fill">
-                    <mat-label class="form-label" for="editStickyTitleInput">Title:</mat-label>
-                    <input matInput class="form-control" type="text" id="editStickyTitleInput" formControlName="editStickyTitle">
-                </mat-form-field>
-            
-                <mat-form-field appearance="fill">
-                    <mat-label class="form-label" for="editStickyNoteInput">Note:</mat-label>
-                    <input matInput  class="form-control" type="text" id="editStickyNoteInput" formControlName="editStickyNote">
-                </mat-form-field>
-            </div>
-            <button mat-raised-button color="accent" type="submit">Edit Note</button>
-        </form>
-    </mat-card>
-</div>
+<mat-card class="container">
+  <form [formGroup]="editedStickyForm" (ngSubmit)="onEditStickyNote()">
+    <h1>Edit Note</h1>
+    <div class="inputs-div">
+      <mat-form-field appearance="fill">
+        <mat-label class="form-label" for="editStickyTitleInput"
+          >Title:</mat-label
+        >
+        <input
+          matInput
+          class="form-control"
+          type="text"
+          id="editStickyTitleInput"
+          formControlName="editStickyTitle"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label class="form-label" for="editStickyNoteInput"
+          >Note:</mat-label
+        >
+        <input
+          matInput
+          class="form-control"
+          type="text"
+          id="editStickyNoteInput"
+          formControlName="editStickyNote"
+        />
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="accent" type="submit">Edit Note</button>
+  </form>
+</mat-card>

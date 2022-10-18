@@ -11,11 +11,15 @@ h1 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 30%;
+        width: 100%;
         .inputs-div{
             display: flex;
             justify-content: center;
             gap: 20px;
+        }
+
+        h1 {
+          margin-bottom: 40px;
         }
 
         button {
@@ -27,19 +31,25 @@ h1 {
             // border: 1px solid $mainColor;
             border: none;
             border-radius: 4px;
+            margin-top: 10px;
         }
-        
+
         button:hover {
             background-color: $mainColor;
             color: $secondTextColor;
             border: none;
         }
-        
+
         button:active {
             margin-left: 1px 1px 0;
             box-shadow: -1px -1px 1px #000;
             outline: 1px solid black;
         }
     }
+}
+
+mat-card {
+  width: 45%;
+  margin: 70px auto;
 }
 
