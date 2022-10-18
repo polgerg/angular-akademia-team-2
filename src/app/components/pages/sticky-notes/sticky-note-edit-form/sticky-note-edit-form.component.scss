@@ -1,55 +1,36 @@
-@import '../../../../../assets/styles/variables';
-
-h1 {
-    text-align: center;
-    font-size: 3rem;
-}
+@import "../../../../../assets/styles/variables";
 
 .container {
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        .inputs-div{
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
-        h1 {
-          margin-bottom: 40px;
-        }
-
-        button {
-            height: 40px;
-            width: 50%;
-            background-color: $secondColor;
-            color: $secondTextColor;
-            padding: 4px 6px;
-            // border: 1px solid $mainColor;
-            border: none;
-            border-radius: 4px;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background-color: $mainColor;
-            color: $secondTextColor;
-            border: none;
-        }
-
-        button:active {
-            margin-left: 1px 1px 0;
-            box-shadow: -1px -1px 1px #000;
-            outline: 1px solid black;
-        }
+    .inputs-div {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-direction: column;
+      width: 80%;
     }
+
+    h1 {
+      margin-top: 10px;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+    }
+
+    button {
+      width: 50%;
+      height: 45px;
+      margin: 10px 0 6px 0;
+    }
+  }
 }
 
 mat-card {
-  width: 45%;
-  margin: 70px auto;
+  width: 40%;
+  margin: 90px auto;
 }
-

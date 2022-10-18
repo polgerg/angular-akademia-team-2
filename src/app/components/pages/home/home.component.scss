@@ -1,3 +1,5 @@
+ @import "../../../../assets/styles/variables";
+
  .body-main-container {
     min-height: 100vh;
     display: flex;
@@ -18,6 +20,6 @@
 }
 
 .outlet-div {
-    background-color: white;
+    background-color: $indigo-light;
     width: calc(100vw - 200px);
 }
