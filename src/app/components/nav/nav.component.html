@@ -21,14 +21,56 @@
     </div>
 </nav> -->
 
-
-  <mat-toolbar color="primary" class="navbar-div">
-  <a mat-raised-button color="primary" class="link-item-div" mat-sidenav-content routerLink="task1" routerLinkActive="router-link-active">1. feladat</a>
-  <a mat-raised-button color="primary" class="link-item-div" routerLink="task2" routerLinkActive="router-link-active">2. feladat</a>
-  <a mat-raised-button color="primary" class="link-item-div" routerLink="sticky-notes" routerLinkActive="router-link-active">Sticky Notes</a>
-  <a mat-raised-button color="primary" class="link-item-div" routerLink="accordion" routerLinkActive="router-link-active">Accordion</a>
-  <a mat-raised-button color="primary" class="link-item-div"  routerLink="grid-example" routerLinkActive="router-link-active">Grid example</a>
-  <a mat-sidenav-content><button mat-raised-button color="accent" (click)="logout()">Logout</button></a>
+<mat-toolbar color="primary" class="navbar-div">
+  <a
+    mat-raised-button
+    color="primary"
+    class="link-item-div"
+    mat-sidenav-content
+    routerLink="task1"
+    routerLinkActive="router-link-active"
+    >1. feladat</a
+  >
+  <a
+    mat-raised-button
+    color="primary"
+    class="link-item-div"
+    routerLink="task2"
+    routerLinkActive="router-link-active"
+    >2. feladat</a
+  >
+  <a
+    mat-raised-button
+    color="primary"
+    class="link-item-div"
+    routerLink="sticky-notes"
+    routerLinkActive="router-link-active"
+    >Sticky Notes</a
+  >
+  <a
+    mat-raised-button
+    color="primary"
+    class="link-item-div"
+    routerLink="accordion"
+    routerLinkActive="router-link-active"
+    >Accordion</a
+  >
+  <a
+    mat-raised-button
+    color="primary"
+    class="link-item-div"
+    routerLink="grid-example"
+    routerLinkActive="router-link-active"
+    >Grid example</a
+  >
+  <a mat-sidenav-content class="logout-button-cont"
+    ><button
+      class="logout-button"
+      mat-raised-button
+      color="accent"
+      (click)="logout()"
+    >
+      Logout
+    </button></a
+  >
 </mat-toolbar>
-
-
