@@ -1,5 +1,5 @@
 <div class="alignment-container">
-    <div class="horizontal-alignment-div">
+    <!-- <div class="horizontal-alignment-div">
         <div id="a1" class="icon-img-div" (click)="setHorizontalAlignment('start')">
             <img src="assets/images/left-align.png" alt="">
         </div>
@@ -12,13 +12,41 @@
         <div id="a4" class="icon-img-div" (click)="setHorizontalAlignment('space-between')">
             <img src="assets/images/justification.png" alt="">
         </div>
-    </div>
+    </div> -->
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+      <mat-button-toggle value="start" aria-label="Text align left" (click)="setHorizontalAlignment('start')">
+        <mat-icon>format_align_left</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="center" aria-label="Text align center" (click)="setHorizontalAlignment('center')">
+        <mat-icon>format_align_center</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="end" aria-label="Text align right" (click)="setHorizontalAlignment('end')">
+        <mat-icon>format_align_right</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="space-between" aria-label="Text align justify" (click)="setHorizontalAlignment('space-between')">
+        <mat-icon>format_align_justify</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
     <div>
         <div>
             <img src="assets/images/line.png" alt="">
         </div>
     </div>
-    <div class="horizontal-alignment-div">
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+      <mat-button-toggle value="flex-start" aria-label="Text align left" (click)="setVerticalAlignment('flex-start')">
+        <mat-icon>format_align_left</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="flex-end" aria-label="Text align center" (click)="setVerticalAlignment('flex-end')">
+        <mat-icon>format_align_center</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="center" aria-label="Text align right" (click)="setVerticalAlignment('center')">
+        <mat-icon>format_align_right</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="stretch" aria-label="Text align justify" (click)="setVerticalAlignment('stretch')">
+        <mat-icon>format_align_justify</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+    <!-- <div class="horizontal-alignment-div">
         <div id="b1" class="icon-img-div" (click)="setVerticalAlignment('flex-start')">
             <img src="assets/images/top-alignment.png" alt="">
         </div>
@@ -31,5 +59,5 @@
         <div id="b4" class="icon-img-div" (click)="setVerticalAlignment('stretch')">
             <img src="assets/images/distribute.png" alt="">
         </div>
-    </div>
+    </div> -->
 </div>

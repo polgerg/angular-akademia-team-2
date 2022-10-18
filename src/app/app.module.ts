@@ -18,6 +18,14 @@ import { StickyNoteEditFormComponent } from './components/pages/sticky-notes/sti
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { AccordionPageComponent } from './components/pages/accordion-page/accordion-page.component';
 import { GridExampleComponent } from './components/pages/grid-example/grid-example.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -41,7 +49,15 @@ import { GridExampleComponent } from './components/pages/grid-example/grid-examp
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatInputModule,
+    MatButtonToggleModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

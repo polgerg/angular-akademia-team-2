@@ -6,11 +6,11 @@
 </div>
 <div class="edit-main-container">
     <div class="edit-div">
-        <div class="icon-img-div" (click)="editNote(note!.id)">
-            <img src="assets/images/edit-icon.png" alt="">
-        </div>
-        <div class="icon-img-div delete-icon-div" (click)="deleteNote(note!.id)" id="{{note!.id}}-button">
-            <img src="assets/images/delete-icon.png" alt="">
-        </div>
+        <button mat-button color="accent" class="icon-img-div" (click)="editNote(note!.id)">
+          <mat-icon>edit-note</mat-icon>
+        </button>
+        <button mat-button color="accent" class="icon-img-div delete-icon-div" (click)="deleteNote(note!.id)" id="{{note!.id}}-button">
+          <mat-icon>delete-sweep</mat-icon>
+        </button>
     </div>
 </div>

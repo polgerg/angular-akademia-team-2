@@ -1,18 +1,18 @@
-<div  style="width: 50%; margin: auto;">
+<mat-card style="width: 50%; margin: auto;">
     <h2 style="text-align: center; margin: auto">Login</h2>
     <form *ngIf="!authService.getUser()" [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div>
-            <label class="form-label" for="username">Username</label>
-            <input class="form-control" formControlName="username" type="text" id="username">
-        </div>
+        <mat-form-field appearance="fill">
+            <mat-label class="form-label" for="username">Username</mat-label>
+            <input matInput class="form-control" formControlName="username" type="text" id="username">
+        </mat-form-field>
 
-        <div>
-            <label class="form-label" for="password">Password</label>
-            <input class="form-control" formControlName="password" type="password" id="password">
-        </div>
+        <mat-form-field appearance="fill">
+            <mat-label class="form-label" for="password">Password</mat-label>
+            <input matInput class="form-control" formControlName="password" type="password" id="password">
+        </mat-form-field>
         
-        <button class="btn btn-dark mt-2" type="submit">Send</button>
+        <button mat-raised-button color="accent" type="submit">Send</button>
+        <mat-error *ngIf="message" class="alert alert-danger alert-message">{{message}}</mat-error>
     </form>
 
-    <div *ngIf="message" class="alert alert-danger alert-message">{{message}}</div>
-</div>
+</mat-card>
