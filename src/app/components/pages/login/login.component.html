@@ -1,18 +1,48 @@
-<mat-card style="width: 50%; margin: auto;">
-    <h2 style="text-align: center; margin: auto">Login</h2>
-    <form *ngIf="!authService.getUser()" [formGroup]="form" (ngSubmit)="onSubmit()">
+<div class="outer-container">
+  <mat-card>
+    <form
+      *ngIf="!authService.getUser()"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+    >
+      <h1
+        style="
+          text-align: center;
+          margin: auto;
+          font-size: 28px;
+          font-weight: 500;
+          margin-bottom: 30px;
+        "
+      >
+        Login
+      </h1>
+      <div class="inputs-div">
         <mat-form-field appearance="fill">
-            <mat-label class="form-label" for="username">Username</mat-label>
-            <input matInput class="form-control" formControlName="username" type="text" id="username">
+          <mat-label class="form-label" for="username">Username</mat-label>
+          <input
+            matInput
+            class="form-control"
+            formControlName="username"
+            type="text"
+            id="username"
+          />
         </mat-form-field>
 
         <mat-form-field appearance="fill">
-            <mat-label class="form-label" for="password">Password</mat-label>
-            <input matInput class="form-control" formControlName="password" type="password" id="password">
+          <mat-label class="form-label" for="password">Password</mat-label>
+          <input
+            matInput
+            class="form-control"
+            formControlName="password"
+            type="password"
+            id="password"
+          />
         </mat-form-field>
-        
-        <button mat-raised-button color="accent" type="submit">Send</button>
-        <mat-error *ngIf="message" class="alert alert-danger alert-message">{{message}}</mat-error>
+      </div>
+      <button mat-raised-button color="accent" type="submit">SEND</button>
+      <mat-error *ngIf="message" class="alert alert-danger alert-message">{{
+        message
+      }}</mat-error>
     </form>
-
-</mat-card>
+  </mat-card>
+</div>
