@@ -26,6 +26,7 @@ import { MatCardModule } from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatIconModule} from '@angular/material/icon';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatCardModule,
     MatInputModule,
     MatButtonToggleModule,
-    MatIconModule
+    MatIconModule,
+    CdkAccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
