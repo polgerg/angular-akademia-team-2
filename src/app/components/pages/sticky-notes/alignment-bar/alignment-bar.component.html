@@ -14,31 +14,31 @@
         </div>
     </div> -->
     <mat-button-toggle-group #group="matButtonToggleGroup">
-      <mat-button-toggle value="start" aria-label="Text align left" (click)="setHorizontalAlignment('start')">
+      <mat-button-toggle id="a1" value="start" aria-label="Text align left" (click)="setHorizontalAlignment('start')">
         <mat-icon>format_align_left</mat-icon>
       </mat-button-toggle>
-      <mat-button-toggle value="center" aria-label="Text align center" (click)="setHorizontalAlignment('center')">
+      <mat-button-toggle id="a3" value="center" aria-label="Text align center" (click)="setHorizontalAlignment('center')">
         <mat-icon>format_align_center</mat-icon>
       </mat-button-toggle>
-      <mat-button-toggle value="end" aria-label="Text align right" (click)="setHorizontalAlignment('end')">
+      <mat-button-toggle id="a2" value="end" aria-label="Text align right" (click)="setHorizontalAlignment('end')">
         <mat-icon>format_align_right</mat-icon>
       </mat-button-toggle>
-      <mat-button-toggle value="space-between" aria-label="Text align justify" (click)="setHorizontalAlignment('space-between')">
+      <mat-button-toggle id="a4" value="space-between" aria-label="Text align justify" (click)="setHorizontalAlignment('space-between')">
         <mat-icon>format_align_justify</mat-icon>
       </mat-button-toggle>
     </mat-button-toggle-group>
 
     <mat-button-toggle-group #group="matButtonToggleGroup">
-      <mat-button-toggle value="flex-start" aria-label="Text align left" (click)="setVerticalAlignment('flex-start')">
+      <mat-button-toggle id="b1" value="flex-start" aria-label="Text align left" (click)="setVerticalAlignment('flex-start')">
         <mat-icon>vertical_align_top</mat-icon>
       </mat-button-toggle>
-      <mat-button-toggle value="flex-end" aria-label="Text align center" (click)="setVerticalAlignment('flex-end')">
+      <mat-button-toggle id="b2" value="flex-end" aria-label="Text align center" (click)="setVerticalAlignment('flex-end')">
         <mat-icon>vertical_align_bottom</mat-icon>
       </mat-button-toggle>
-      <mat-button-toggle value="center" aria-label="Text align right" (click)="setVerticalAlignment('center')">
+      <mat-button-toggle id="b3" value="center" aria-label="Text align right" (click)="setVerticalAlignment('center')">
         <mat-icon>vertical_align_center</mat-icon>
       </mat-button-toggle>
-      <mat-button-toggle value="stretch" aria-label="Text align justify" (click)="setVerticalAlignment('stretch')">
+      <mat-button-toggle id="b4" value="stretch" aria-label="Text align justify" (click)="setVerticalAlignment('stretch')">
         <mat-icon>format_line_spacing</mat-icon>
       </mat-button-toggle>
     </mat-button-toggle-group>
